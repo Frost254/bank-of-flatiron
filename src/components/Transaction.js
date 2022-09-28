@@ -1,20 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Transaction() {
-    /*
-    fetch ("http://localhost:8001/transactions") {
-      .then((response) => res.json),
-      .then()
-    }
-     */
-    return ( <
-        tr >
-        <
-        td > { "your code here..." } < /td> <
-        td > { "your code here..." } < /td> <
-        td > { "your code here..." } < /td> <
-        td > { "your code here..." } < /td> < /
-        tr >
+    const [transactionData, setTransactionData] = useState({
+        date: "",
+        description: "",
+        category: "",
+        amount: ""
+    })
+
+    useEffect(() => {
+        fetch("http://localhost:8001/transactions")
+            .then(res => res.json())
+            .then(data => setTransactionData(data))
+
+    }, []);
+
+    console.log(transactionData)
+
+    return (
+        transactionData.map(data => {
+            return < >
+                <
+                tr key = { data.id } >
+                <
+                td > { data.date } < /td>   <
+                td > { data.description } < /td>    <
+                td > { data.category } < /td>    <
+                td > { data.amount } < /td>   <
+                /tr>  <
+                />
+        })
+
     );
 }
 
