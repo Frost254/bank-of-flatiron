@@ -104,6 +104,13 @@
       "category": "Wages",
       "amount": "1000",
       "id": 15
+    },
+    {
+      "date": "2022-09-01",
+      "description": "Uber Ride",
+      "category": "Expenses",
+      "amount": "25",
+      "id": 16
     }
   ]
 }

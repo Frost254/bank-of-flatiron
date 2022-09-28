@@ -14,17 +14,17 @@ function AddTransactionForm() {
             [event.target.name]: event.target.value
         })
     }
-    console.log(newTransaction);
 
     function handleSubmit(event) {
         event.preventDefault();
         fetch("http://localhost:8001/transactions", {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(newTransaction),
-        })
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(newTransaction),
+            })
+            .then(console.log(newTransaction));
 
     }
 
