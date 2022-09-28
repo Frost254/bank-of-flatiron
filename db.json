@@ -83,6 +83,27 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "date": "2022-09-07",
+      "description": "Salary Increment",
+      "category": "Wages",
+      "amount": "1000",
+      "id": 13
+    },
+    {
+      "date": "2022-09-07",
+      "description": "Salary Increment",
+      "category": "Wages",
+      "amount": "1000",
+      "id": 14
+    },
+    {
+      "date": "2022-09-07",
+      "description": "Salary Increment",
+      "category": "Wages",
+      "amount": "1000",
+      "id": 15
     }
   ]
 }
